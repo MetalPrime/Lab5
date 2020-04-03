@@ -23,6 +23,20 @@ public class Main extends PApplet {
 		size(800,700);
 	}
 	
+	/**
+	 * @return the list
+	 */
+	public LinkedList<Lista> getList() {
+		return list;
+	}
+
+	/**
+	 * @param list the list to set
+	 */
+	public void setList(LinkedList<Lista> list) {
+		this.list = list;
+	}
+
 	public void setup() {
 		text1 = loadStrings("./../data/txt1.txt");
 		text2 = loadStrings("./../data/txt2.txt");
@@ -45,6 +59,13 @@ public class Main extends PApplet {
 				
 				
 			}
+		}
+		
+		int numberRandom= 5;
+		for(int i=0; i<numberRandom;i++) {
+			String input= "#";
+			System.out.println(input);
+			input += input+input;
 		}
 		}
 	
