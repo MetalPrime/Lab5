@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 import processing.core.PApplet;
@@ -18,6 +20,10 @@ public class Logic {
 	private int age;
 	private String race;
 	private int birthday;
+	private SortAges SAges;
+	private SortBirthday SBirthday;
+	private SortName SName;
+	private SortRace SRace;
 	
 	public Logic(PApplet app) {
 		this.app = app;
@@ -57,13 +63,29 @@ public class Logic {
 				
 				
 			}
-			
-			
-				
-						
-				
-			
+	
+	@SuppressWarnings("unchecked")
+	public void sortList(char c) {
+		switch (c) { 
+		case 'i':
+				Collections.sort(DogList);
+			break;
+		case 'a':
+				Collections.sort(DogList,SAges);
+			break;
+		case 'b':
+				Collections.sort(DogList,SBirthday);
+			break;
+		case 'n':
+			Collections.sort(DogList,SName);
+		break;
+		case 'r':
+			Collections.sort(DogList,SRace);
+		break;
+
+		}
 		
+	}	
 		
 		
 	/**
