@@ -1,3 +1,10 @@
-50 200 Circle
-250 400 Circle
-100 300 Circle
+5,Doggy,2
+2,Mateo,5
+4,Anibal,6
+3,Floppi,20
+7,Gasper,15
+8,Pegaso,5
+10,Firulais,8
+1,Cancerbero,12
+6,White,9
+9,Zorro,1
