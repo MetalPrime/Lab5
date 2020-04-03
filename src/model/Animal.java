@@ -2,13 +2,13 @@ package model;
 
 public abstract  class  Animal {
 	
-	private int id;
-	private String age;
-	private String name;
-	private String race;
-	private String birthday;
+	protected int id;
+	protected int age;
+	protected String name;
+	protected String race;
+	protected int birthday;
 
-	public Animal(int id, String name, String age, String race, String birthday){
+	public Animal(int id, String name, int age, String race, int birthday){
 		this.id = id;
 		this.name = name;
 		this.age = age;
@@ -35,14 +35,14 @@ public abstract  class  Animal {
 	/**
 	 * @return the age
 	 */
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
 
 	/**
 	 * @param age the age to set
 	 */
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -77,14 +77,14 @@ public abstract  class  Animal {
 	/**
 	 * @return the birthday
 	 */
-	public String getBirthday() {
+	public int getBirthday() {
 		return birthday;
 	}
 
 	/**
 	 * @param birthday the birthday to set
 	 */
-	public void setBirthday(String birthday) {
+	public void setBirthday(int birthday) {
 		this.birthday = birthday;
 	} 
 	
