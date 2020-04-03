@@ -1,6 +1,6 @@
 package model;
 
-public abstract  class  Animal {
+public abstract  class  Animal implements Comparable{
 	
 	protected int id;
 	protected int age;
@@ -86,6 +86,11 @@ public abstract  class  Animal {
 	 */
 	public void setBirthday(int birthday) {
 		this.birthday = birthday;
+	}
+
+	public int compareTo(Dog ID) {
+		// TODO Auto-generated method stub
+		return this.id - ID.getId();
 	} 
 	
 	

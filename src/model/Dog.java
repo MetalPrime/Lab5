@@ -1,6 +1,7 @@
 package model;
 
-public class Dog extends Animal{
+
+public class Dog extends Animal  {
 
 	private int id;
 	private String name;
@@ -23,5 +24,20 @@ public class Dog extends Animal{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public int compareTo(Dog ID) {
+		// TODO Auto-generated method stub
+		return this.id - ID.getId();
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
 
 }
