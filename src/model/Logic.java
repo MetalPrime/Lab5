@@ -31,6 +31,10 @@ public class Logic {
 		txt1 = app.loadStrings("./../data/txt1.txt");
 		txt2 = app.loadStrings("./../data/txt2.txt");
 		
+		SAges = new SortAges();
+		SBirthday = new SortBirthday();
+		SName = new SortName();
+		SRace = new SortRace();
 		for (int i = 0; i < txt1.length; i++) {
 
 			info1 = txt1[i].split(",");
@@ -50,8 +54,8 @@ public class Logic {
 					birthday = Integer.parseInt(info2[2]);
 					
 
-					DogList.add(new Dog(id, name, age, race, birthday));
-					System.out.println(DogList.size());
+					DogList.add(new Dog(id, name, age, race, birthday,app));
+				}
 				}
 			}
 
@@ -62,9 +66,9 @@ public class Logic {
 					
 				
 				
-			}
+			
 	
-	@SuppressWarnings("unchecked")
+	
 	public void sortList(char c) {
 		switch (c) { 
 		case 'i':

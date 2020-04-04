@@ -1,22 +1,26 @@
 package model;
 
-public abstract  class  Animal implements Comparable{
+import processing.core.PApplet;
+
+public abstract  class  Animal implements Comparable<Animal>{
 	
 	protected int id;
 	protected int age;
 	protected String name;
 	protected String race;
 	protected int birthday;
+	protected int posX,posY;
+	protected PApplet app;
 
-	public Animal(int id, String name, int age, String race, int birthday){
+	public Animal(int id, String name, int age, String race, int birthday,PApplet app){
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.race = race;
 		this.birthday = birthday;
+		this.app = app;
 	}
 	
-	public abstract void paint();
 
 	/**
 	 * @return the id
@@ -91,7 +95,46 @@ public abstract  class  Animal implements Comparable{
 	public int compareTo(Dog ID) {
 		// TODO Auto-generated method stub
 		return this.id - ID.getId();
-	} 
-	
+	}
+
+	public void paint(int posX, int posY) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	/**
+	 * @return the posX
+	 */
+	public int getPosX() {
+		return posX;
+	}
+
+
+	/**
+	 * @param posX the posX to set
+	 */
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+
+	/**
+	 * @return the posY
+	 */
+	public int getPosY() {
+		return posY;
+	}
+
+
+	/**
+	 * @param posY the posY to set
+	 */
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+
+
+
 	
 }

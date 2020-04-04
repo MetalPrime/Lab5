@@ -2,12 +2,17 @@ package model;
 
 import java.util.Comparator;
 
-public  class SortAges implements Comparator<Dog> {
+public  class SortAges implements Comparator<Animal> {
 
 	@Override
-	public int compare(Dog arg0, Dog arg1) {
+	public int compare(Animal o1, Animal o2) {
 		// TODO Auto-generated method stub
-		return arg0.getAge()-arg1.getAge();
+		return o1.getAge()-o2.getAge();
+
 	}
+
+
+
+
 	
 }
