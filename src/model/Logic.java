@@ -24,6 +24,7 @@ public class Logic {
 	private SortBirthday SBirthday;
 	private SortName SName;
 	private SortRace SRace;
+	private String [] tID,tName,tAge,tRace,tBirthday;
 	
 	public Logic(PApplet app) {
 		this.app = app;
@@ -35,6 +36,14 @@ public class Logic {
 		SBirthday = new SortBirthday();
 		SName = new SortName();
 		SRace = new SortRace();
+		
+		tID = new String[10];
+		tName = new String[10];
+		tAge = new String[10];
+		tRace = new String[10];
+		tBirthday = new String[10];
+		
+		
 		for (int i = 0; i < txt1.length; i++) {
 
 			info1 = txt1[i].split(",");
@@ -73,18 +82,45 @@ public class Logic {
 		switch (c) { 
 		case 'i':
 				Collections.sort(DogList);
+				for(int i=0; i<DogList.size(); i++) {
+					String line= (DogList.get(i).getId() + " " + DogList.get(i).getName() + " "  + DogList.get(i).getAge() + " "   + DogList.get(i).getRace() + " "  + DogList.get(i).getBirthday() );
+					tID[i] = line;
+					app.saveStrings("byID.txt", tID);
+				}
+			
 			break;
 		case 'a':
 				Collections.sort(DogList,SAges);
+				for(int i=0; i<DogList.size(); i++) {
+					String line= (DogList.get(i).getId() + " " + DogList.get(i).getName() + " "  + DogList.get(i).getAge() + " "   + DogList.get(i).getRace() + " "  + DogList.get(i).getBirthday() );
+					tAge[i] = line;
+					app.saveStrings("byAge.txt", tAge);
+				}
 			break;
 		case 'b':
 				Collections.sort(DogList,SBirthday);
+				for(int i=0; i<DogList.size(); i++) {
+					String line= (DogList.get(i).getId() + " " + DogList.get(i).getName() + " "  + DogList.get(i).getAge() + " "   + DogList.get(i).getRace() + " "  + DogList.get(i).getBirthday() );
+					tBirthday[i] = line;
+					app.saveStrings("byBirthday.txt", tBirthday);
+				}
 			break;
 		case 'n':
 			Collections.sort(DogList,SName);
+			for(int i=0; i<DogList.size(); i++) {
+				String line= (DogList.get(i).getId() + " " + DogList.get(i).getName() + " "  + DogList.get(i).getAge() + " "   + DogList.get(i).getRace() + " "  + DogList.get(i).getBirthday() );
+				tName[i] = line;
+				app.saveStrings("byName.txt", tName);
+			}
 		break;
 		case 'r':
 			Collections.sort(DogList,SRace);
+			for(int i=0; i<DogList.size(); i++) {
+				String line= (DogList.get(i).getId() + " " + DogList.get(i).getName() + " "  + DogList.get(i).getAge() + " "   + DogList.get(i).getRace() + " "  + DogList.get(i).getBirthday() );
+				tRace[i] = line;
+				app.saveStrings("byRace.txt", tRace);
+			}
+			System.out.println(tRace[0]);
 		break;
 
 		}

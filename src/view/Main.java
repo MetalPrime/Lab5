@@ -31,7 +31,7 @@ public class Main extends PApplet {
 	public void draw() {
 		background(0);
 		for(int i=0; i<controller.listBall().size(); i++) {
-			System.out.println(controller.listBall().size());
+			//System.out.println(controller.listBall().size());
 			
 			controller.listBall().get(i).paint(40, i*60);
 		}
